@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - EVLux Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="topo">
+            <img src="imagens/logoevlux1.png" alt="Logo EVLux Digital">
+            <div class="texto">
+                <h1>EVLux Digital</h1>
+                <h2>"Transformando ideias em soluções digitais"</h2>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="servicos.html" class="nav-link">Serviços</a>
+                <a href="portfolio.html" class="nav-link">Portfólio</a>
+                <a href="contato.html" class="nav-link active">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contato-page">
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Entre em <span class="highlight">Contato</span></h1>
+                <p class="page-subtitle">Vamos conversar sobre seu projeto e transformar suas ideias em realidade digital</p>
+            </div>
+        </section>
+
+        <section class="contato-content">
+            <div class="container">
+                <div class="contato-grid">
+                    <div class="contato-info">
+                        <h2>Fale Conosco</h2>
+                        <p>Estamos prontos para ajudar você a criar soluções digitais incríveis. Entre em contato através dos canais abaixo ou envie uma mensagem pelo formulário.</p>
+
+                        <div class="contato-methods">
+                            <div class="contato-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h3>E-mail</h3>
+                                    <p>evlux.digital@gmail.com</p>
+                                    <a href="mailto:evlux.digital@gmail.com" class="method-link">Enviar e-mail</a>
+                                </div>
+                            </div>
+
+                            <div class="contato-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h3>WhatsApp</h3>
+                                    <p>(82) 99318-1740</p>
+                                    <a href="https://wa.me/5582993181740" target="_blank" class="method-link">Chamar no WhatsApp</a>
+                                </div>
+                            </div>
+
+                            <div class="contato-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h3>Instagram</h3>
+                                    <p>@evluxdigital</p>
+                                    <a href="https://instagram.com/meuperf" target="_blank" class="method-link">Seguir no Instagram</a>
+                                </div>
+                            </div>
+
+                            <div class="contato-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h3>Horário de Atendimento</h3>
+                                    <p>Segunda a Sexta: 8h às 18h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contato-form">
+                        <div class="form-container">
+                            <h2>Envie sua Mensagem</h2>
+                            <p>Preencha o formulário abaixo e entraremos em contato em breve</p>
+
+                            <form action="https://formsubmit.com/evlux.digital@gmail.com" method="POST" class="contact-form">
+                                <input type="hidden" name="_subject" value="Nova mensagem do site EVLux Digital">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="obrigado.html">
+
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo *</label>
+                                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" name="email" required placeholder="Digite seu melhor e-mail">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="servico">Tipo de Serviço</label>
+                                    <select id="servico" name="servico">
+                                        <option value="">Selecione um serviço</option>
+                                        <option value="site-institucional">Site Institucional</option>
+                                        <option value="cartao-digital">Cartão de Visita Digital</option>
+                                        <option value="landing-page">Landing Page</option>
+                                        <option value="consultoria">Consultoria Digital</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mensagem">Mensagem *</label>
+                                    <textarea id="mensagem" name="mensagem" required placeholder="Conte-nos sobre seu projeto e como podemos ajudar..." rows="5"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-primary full-width">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Perguntas <span class="highlight">Frequentes</span></h2>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Quanto tempo leva para criar um site?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>O prazo varia conforme a complexidade do projeto. Sites simples ficam prontos em 5-7 dias úteis, enquanto projetos mais complexos podem levar de 2-3 semanas.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Vocês oferecem suporte após a entrega?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! Oferecemos 30 dias de suporte gratuito após a entrega para ajustes e dúvidas. Também temos planos de manutenção mensais.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Os sites são responsivos?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutamente! Todos os nossos sites são desenvolvidos com design responsivo, funcionando perfeitamente em computadores, tablets e smartphones.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Qual é o valor de um projeto?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Os valores variam conforme as necessidades do projeto. Entre em contato conosco para um orçamento personalizado e gratuito.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="imagens/logoevlux1.png" alt="EVLux Digital" class="footer-logo">
+                    <p>Transformando ideias em soluções digitais com excelência e inovação.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#servicos">Serviços</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> deiwisonsantos@gmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> (82) 99318-1740</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EVLux Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5582993181740" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

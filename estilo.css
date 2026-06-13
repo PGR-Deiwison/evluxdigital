@@ -1077,28 +1077,41 @@ footer {
     }
     
     .hero-visual {
-        height: 300px;
+        height: 500px;
     }
 
     .floating-cards {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
+        height: 100%;
     }
 
     .card {
-        position: static;
-        animation: none;
+        position: relative;
         animation: float 6s ease-in-out infinite;
     }
 
-    .card-1,
-    .card-2,
-    .card-3 {
-        position: static;
+    .card-1 {
+        align-self: flex-start;
+        margin-left: 20px;
+        animation-duration: 5s;
         animation-delay: 0s;
+    }
+
+    .card-2 {
+        align-self: center;
+        animation-duration: 7s;
+        animation-delay: 1s;
+    }
+
+    .card-3 {
+        align-self: flex-end;
+        margin-right: 20px;
+        animation-duration: 6s;
+        animation-delay: 2s;
     }
     
     .servicos-grid {

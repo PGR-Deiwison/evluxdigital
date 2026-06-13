@@ -1079,6 +1079,27 @@ footer {
     .hero-visual {
         height: 300px;
     }
+
+    .floating-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        position: static;
+        animation: none;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        position: static;
+        animation-delay: 0s;
+    }
     
     .servicos-grid {
         grid-template-columns: 1fr;

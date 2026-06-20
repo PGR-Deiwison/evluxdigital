@@ -90,9 +90,9 @@ header {
 }
 
 .topo h2 {
-    font-size: clamp(12px, 2vw, 16px);
-    font-weight: 400;
-    opacity: 0.9;
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 700;
+    opacity: 1;
     font-style: italic;
 }
 

@@ -59,6 +59,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Modal de Visualização de Projetos
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.querySelector('.modal-close');
+    const viewButtons = document.querySelectorAll('.btn-view');
+
+    // Abre o modal ao clicar no botão de visualização
+    viewButtons.forEach((button, index) => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Pega a imagem do projeto correspondente
+            const projectCard = this.closest('.project-card');
+            const projectImage = projectCard.querySelector('.project-image img');
+            
+            if (projectImage && projectImage.src) {
+                modalImage.src = projectImage.src;
+                modalImage.alt = projectImage.alt;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Fecha o modal ao clicar no X
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Fecha o modal ao clicar fora da imagem
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Fecha o modal ao pressionar ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
     // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     

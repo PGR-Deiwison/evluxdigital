@@ -1237,6 +1237,28 @@ footer {
     gap: 25px; 
     padding: 40px 0;
     width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) var(--bg-light);
+}
+
+.cartoes-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cartoes-gallery::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+.cartoes-gallery::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+.cartoes-gallery::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
 
 .cartao-item {
@@ -1247,7 +1269,9 @@ footer {
     transition: var(--transition);
     /* Força os cartões a terem a mesma altura mesmo com textos diferentes */
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    flex-shrink: 0;
+    scroll-snap-align: start;
 }
 
 .cartao-item:hover {
@@ -1512,11 +1536,24 @@ html {
 
 @media (max-width: 768px) {
     .cartoes-gallery {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .cartao-item {
+        flex: 0 0 calc(100vw - 40px);
+        min-width: calc(100vw - 40px);
+        max-width: calc(100vw - 40px);
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
 
     .cartao-image {
-        height: 300px;
+        height: 250px;
     }
 }

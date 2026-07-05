@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Filtro do portfólio
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.project-card, .cartao-item');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -49,8 +49,9 @@ document.addEventListener('DOMContentLoaded', function() {
             projectCards.forEach(card => {
                 const cardCategory = card.getAttribute('data-category');
                 
+                // Se for a categoria correta ou o botão 'todos'
                 if (filterValue === 'all' || cardCategory === filterValue) {
-                    card.style.display = 'block';
+                    card.style.removeProperty('display'); 
                     card.style.animation = 'fadeInUp 0.6s ease-out';
                 } else {
                     card.style.display = 'none';
@@ -59,13 +60,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Modal de Visualização de Projetos
+    // Carrossel com swipe para cartões de visita digitais em mobile
+    const cartoesGallery = document.querySelector('.cartoes-gallery');
+    if (cartoesGallery) {
+        let startX = 0;
+        let endX = 0;
+        let isScrolling = false;
+
+        cartoesGallery.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isScrolling = true;
+        }, false);
+
+        cartoesGallery.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            isScrolling = false;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe para esquerda (próximo)
+                    scrollCarousel('next');
+                } else {
+                    // Swipe para direita (anterior)
+                    scrollCarousel('prev');
+                }
+            }
+        }
+
+        function scrollCarousel(direction) {
+            const cardWidth = cartoesGallery.querySelector('.cartao-item').offsetWidth + 25;
+            const currentScroll = cartoesGallery.scrollLeft;
+            
+            if (direction === 'next') {
+                cartoesGallery.scrollTo({
+                    left: currentScroll + cardWidth,
+                    behavior: 'smooth'
+                });
+            } else {
+                cartoesGallery.scrollTo({
+                    left: currentScroll - cardWidth,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
+    // Abre o modal ao clicar no botão de visualização
+    const viewButtons = document.querySelectorAll('.view-btn');
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     const modalClose = document.querySelector('.modal-close');
-    const viewButtons = document.querySelectorAll('.btn-view');
 
-    // Abre o modal ao clicar no botão de visualização
     viewButtons.forEach((button, index) => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -340,4 +391,17 @@ function smoothScrollTo(targetY, duration = 1000) {
 // Função de easing para animações suaves
 function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+}
+
+// Função para abrir WhatsApp com mensagem personalizada
+function abrirWhatsApp(mensagem = 'Olá! Gostaria de solicitar um orçamento.') {
+    const numero = '5582993181740';
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+}
+
+// Função para redirecionar para WhatsApp (compatível com links)
+function irParaWhatsApp(event) {
+    event.preventDefault();
+    abrirWhatsApp();
 }

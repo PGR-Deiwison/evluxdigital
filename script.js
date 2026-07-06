@@ -158,6 +158,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Abre o modal ao clicar na imagem do cartão digital
+    const cartaoImages = document.querySelectorAll('.cartao-image');
+    cartaoImages.forEach(cartaoImage => {
+        cartaoImage.style.cursor = 'pointer';
+        cartaoImage.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Pega a imagem do cartão
+            const cartaoImg = this.querySelector('img');
+            
+            if (cartaoImg && cartaoImg.src) {
+                modalImage.src = cartaoImg.src;
+                modalImage.alt = cartaoImg.alt;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
     // FAQ Accordion
     const faqQuestions = document.querySelectorAll('.faq-question');
     

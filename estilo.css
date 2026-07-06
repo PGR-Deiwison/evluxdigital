@@ -1231,34 +1231,10 @@ footer {
 /* Cartões Digitais */
 .cartoes-gallery {
     display: grid;
-    /* Reduzido de 350px para 280px para forçar os 3 a caberem na mesma linha */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    /* Reduzido o espaço entre eles de 40px para 25px */
-    gap: 25px; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 20px; 
     padding: 40px 0;
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent-color) var(--bg-light);
-}
-
-.cartoes-gallery::-webkit-scrollbar {
-    height: 8px;
-}
-
-.cartoes-gallery::-webkit-scrollbar-track {
-    background: var(--bg-light);
-}
-
-.cartoes-gallery::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-    border-radius: 4px;
-}
-
-.cartoes-gallery::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
 }
 
 .cartao-item {
@@ -1270,8 +1246,6 @@ footer {
     /* Força os cartões a terem a mesma altura mesmo com textos diferentes */
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    scroll-snap-align: start;
 }
 
 .cartao-item:hover {
@@ -1281,12 +1255,29 @@ footer {
 
 .cartao-image {
     width: 100%;
-    height: 320px; /* Ajustado de 400px para 320px para não estourar a tela */
+    height: 260px;
     overflow: hidden;
     background: var(--bg-light);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    transition: var(--transition);
+}
+
+.cartao-image:hover {
+    opacity: 0.85;
+}
+
+.cartao-image:hover::after {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    opacity: 1;
+    z-index: 10;
 }
 
 .cartao-image img {
@@ -1295,10 +1286,15 @@ footer {
     /* Alterado de contain para cover para garantir que a imagem preencha o card e apareça */
     object-fit: cover; 
     padding: 0; /* Removido o padding de 20px que reduzia a imagem interna */
+    transition: var(--transition);
+}
+
+.cartao-image:hover img {
+    transform: scale(1.05);
 }
 
 .cartao-info {
-    padding: 25px;
+    padding: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1306,17 +1302,17 @@ footer {
 }
 
 .cartao-info h3 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: var(--text-dark);
 }
 
 .cartao-info p {
     color: var(--text-light);
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 12px;
     flex: 1; /* Empurra o botão de personalizar sempre para o rodapé do card */
 }
 
@@ -1543,6 +1539,25 @@ html {
         -webkit-overflow-scrolling: touch;
         gap: 20px;
         padding: 20px 0;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) var(--bg-light);
+    }
+
+    .cartoes-gallery::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .cartoes-gallery::-webkit-scrollbar-track {
+        background: var(--bg-light);
+    }
+
+    .cartoes-gallery::-webkit-scrollbar-thumb {
+        background: var(--accent-color);
+        border-radius: 4px;
+    }
+
+    .cartoes-gallery::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary-color);
     }
 
     .cartao-item {

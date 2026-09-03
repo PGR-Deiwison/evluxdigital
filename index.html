@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#003366">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
     <!-- Open Graph para redes sociais -->
     <meta property="og:title" content="EVLux Digital - Criação de Sites Profissionais em Alagoas">
     <meta property="og:description" content="Criação de sites profissionais, landing pages e soluções digitais para empresas. Atendimento em Alagoas e todo o Brasil.">
@@ -16,18 +17,23 @@
     <meta property="og:url" content="https://evluxdigital.com.br/">
     <meta property="og:image" content="https://evluxdigital.com.br/imagens/logoevlux1.png">
     <meta property="og:site_name" content="EVLux Digital">
+    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="EVLux Digital - Criação de Sites Profissionais">
     <meta name="twitter:description" content="Transformando ideias em soluções digitais. Sites, landing pages e e-commerce profissionais.">
     <meta name="twitter:image" content="https://evluxdigital.com.br/imagens/logoevlux1.png">
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://evluxdigital.com.br/">
     <title>EVLux Digital - Criação de Sites Profissionais em Alagoas</title>
+    
+    <!-- Arquivos Externos e Estilos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="estilo.css">
     <link rel="icon" href="imagens/favicon-32x32.png" type="image/x-icon">
-    <!-- Schema.org JSON-LD -->
+    
+    <!-- Schema.org JSON-LD (Otimizado para indexar seu negócio local) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,88 +50,126 @@
         "addressCountry": "BR"
       },
       "sameAs": [
-        "https://www.facebook.com/evluxdigital",
-        "https://www.instagram.com/evluxdigital",
-        "https://wa.me/5582993181740"
+        "https://facebook.com",
+        "https://instagram.com",
+        "https://wa.me"
       ],
-      "priceRange": "R$ 300"
+      "priceRange": "$$"
     }
     </script>
 </head>
 <body>
+
+    <!-- NAV / MENU DE NAVEGAÇÃO -->
     <header>
-        <div class="topo">
-            <img src="imagens/logoevlux1.png" alt="Logo EVLux Digital - Criação de Sites Profissionais" loading="lazy">
-            <div class="texto">
-                <h2>EVLux Digital</h2>
-                <h3>"Transformando ideias em soluções digitais"</h3>
+        <nav class="container">
+            <div class="logo">
+                <img src="imagens/logoevlux1.png" alt="EVLux Digital Logo">
             </div>
-            <nav>
-                <a href="index.html" class="nav-link active">Início</a>
-                <a href="servicos.html" class="nav-link">Serviços</a>
-                <a href="portfolio.html" class="nav-link">Portfólio</a>
-                <a href="contato.html" class="nav-link">Contato</a>
-            </nav>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main id="inicio">
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Criação de Sites Profissionais e Soluções Digitais para Empresas <span class="highlight">Sob Medida</span></h1>
-                <p class="hero-subtitle">Criamos experiências digitais únicas que elevam seu negócio ao próximo nível</p>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-cards">
-                    <div class="card card-1"><i class="fas fa-globe"></i></div>
-                    <div class="card card-2"><i class="fas fa-mobile-alt"></i></div>
-                    <div class="card card-3"><i class="fas fa-chart-line"></i></div>
+    <main>
+        <!-- SEÇÃO HERO (TOPO DO SITE) -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-content">
+                <h1>Criação de Sites Profissionais e Landing Pages em Alagoas</h1>
+                <p class="subtitle">Transformamos suas ideias em soluções digitais de alto impacto. Desenvolvemos páginas modernas, rápidas e totalmente otimizadas para o Google atrair mais clientes para o seu negócio.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me?text=Olá,%20gostaria%20de%20um%20orçamento%20de%20site%20com%20a%20EVLux%20Digital!" target="_blank" class="btn-primary">Solicitar Orçamento <i class="fab fa-whatsapp"></i></a>
+                    <a href="#servicos" class="btn-secondary">Conhecer Serviços</a>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
+        <!-- SEÇÃO DE SERVIÇOS (RECHEADA DE TEXTO PARA O GOOGLE LER) -->
+        <section id="servicos" class="services-section">
             <div class="container">
-                <h2>Pronto para transformar seu negócio?</h2>
-                <p>Entre em contato conosco e descubra como podemos ajudar você a alcançar seus objetivos digitais</p>
-                <a href="https://wa.me/5582993181740?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank" class="btn-primary large">Solicitar Orçamento</a>
+                <h2 class="section-title">Nossas Soluções Digitais</h2>
+                <p class="section-subtitle">Desenvolvimento focado em trazer resultados reais, velocidade de carregamento e design totalmente responsivo para celulares.</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Criação de Landing Pages</h3>
+                        <p>Desenvolvemos páginas de vendas de alta conversão focadas em campanhas de tráfego pago (Google Ads e Meta Ads). Ideal para médicos, advogados, psicólogos e infoprodutores que precisam transformar visitantes em contatos no WhatsApp rapidamente.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Sites Institucionais</h3>
+                        <p>Criamos sites institucionais completos para pequenas e médias empresas que buscam estabelecer presença digital com autoridade. Estrutura semântica inteligente, otimização de SEO local para buscas em Alagoas e integração total com redes sociais.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Manutenção e Otimização</h3>
+                        <p>Seu site atual está lento ou desatualizado? Ajustamos e otimizamos códigos existentes para melhorar a velocidade de carregamento, corrigir problemas de responsividade e garantir que sua empresa não perca vendas por falhas técnicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE PORTFÓLIO (VITRINE DO QUE VAMOS CONSTRUIR) -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">Nosso Portfólio</h2>
+                <p class="section-subtitle">Conceitos de design e projetos modernos desenvolvidos sob medida pela nossa agência.</p>
+                
+                <div class="portfolio-grid">
+                    <!-- Projeto 1: Judô -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <h3>Academia de Judô</h3>
+                        <p>Landing Page esportiva focada em matrículas e captação de novos alunos locais com foco em conversão imediata.</p>
+                    </div>
+
+                    <!-- Projeto 2: Noivas -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Ateliê de Vestidos de Noiva</h3>
+                        <p>Site de nicho premium com portfólio visual elegante e canal direto para agendamento de visitas exclusivas.</p>
+                    </div>
+
+                    <!-- Projeto 3: Escola -->
+                    <div class="portfolio-item">
+                        <div class="portfolio-thumb">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3>Escola & Educação</h3>
+                        <p>Página institucional limpa e informativa para apresentação de infraestrutura e captação acadêmica regional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO / CHAMADA PARA AÇÃO FINAL -->
+        <section id="contato" class="cta-section">
+            <div class="container cta-content">
+                <h2>Pronto para transformar o posicionamento digital do seu negócio?</h2>
+                <p>Fale diretamente com um especialista em desenvolvimento web. Atendimento ágil e focado na sua necessidade.</p>
+                <a href="https://wa.me?text=Olá,%20gostaria%20de%20um%20orçamento%20de%20site%20com%20a%20EVLux%20Digital!" target="_blank" class="btn-cta">Iniciar Meu Projeto pelo WhatsApp <i class="fab fa-whatsapp"></i></a>
             </div>
         </section>
     </main>
 
+    <!-- RODAPÉ -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="imagens/logoevlux1.png" alt="EVLux Digital - Logotipo" class="footer-logo" loading="lazy">
-                    <p>Transformando ideias em soluções digitais com excelência e inovação.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="servicos.html">Serviços</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
-                        <li><a href="contato.html">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p><i class="fas fa-envelope"></i> evlux.digital@gmail.com</p>
-                    <p><i class="fab fa-whatsapp"></i> (82) 99318-1740</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 EVLux Digital. Todos os direitos reservados.</p>
-            </div>
+        <div class="container footer-content">
+            <p>&copy; 2026 EVLux Digital. Todos os direitos reservados.</p>
+            <p>Contato: evlux.digital@gmail.com | (82) 99318-1740</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5582993181740" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script src="script.js"></script>
 </body>
 </html>
